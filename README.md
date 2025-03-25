@@ -26,39 +26,43 @@ Click the "Generate Quote" button to display a new random quote.
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quote Generator</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        #quote { font-size: 1.5em; margin: 20px; }
-        button { padding: 10px 20px; font-size: 1em; }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-    <h1>Random Quote Generator</h1>
-    <p id="quote">Click the button to generate a quote!</p>
-    <button onclick="generateQuote()">Generate Quote</button>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+    <div id="wrapper">
+        <div id="quote-box">
+            <div class="quote-text">
+                <i class="fa fa-quote-left"> </i><span id="text"></span>
+            </div>
+            <div class="quote-author">- <span id="author"></span></div>
+            <div class="buttons">
+                <a class="button" id="tweet-quote" title="Tweet this quote!" target="_top">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
+                    <i class="fa fa-tumblr"></i>
+                </a>
+                <button class="button" id="new-quote">New quote</button>
+            </div>
+        </div>
+        <div class="footer">by <a href="#">Muhammad Talha</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    
+    <script src="main.js"></script>
 </body>
+
 </html>
-```
-
-### JavaScript (script.js)
-```javascript
-const quotes = [
-    "The best way to predict the future is to invent it.",
-    "Code is like humor. When you have to explain it, it’s bad.",
-    "Fix the cause, not the symptom.",
-    "Simplicity is the soul of efficiency.",
-    "Make it work, make it right, make it fast."
-];
-
-function generateQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    document.getElementById("quote").innerText = quotes[randomIndex];
-}
 ```
 
 ## License
